@@ -1,0 +1,16 @@
+{
+  "name": "SafeteeJsFlex",
+  "version": "1.0.1",
+  "description": "Safetee Engine",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "hjs": "0.0.4",
+    "less-middleware": "0.1.12",
+    "underscore": "1.4.4",
+    "mongodb": "1.3.10"
+  }
+}

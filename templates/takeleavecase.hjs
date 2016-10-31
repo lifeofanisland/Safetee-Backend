@@ -1,0 +1,6 @@
+{{data}}
+Here are <span id="victim">{{data.name}}</span>'s contact details so you could get in touch right away
+        <div id="contact"></div>
+
+        Here are the list of agencies already collaborating on the case.
+        <div id="collaborate"></div>

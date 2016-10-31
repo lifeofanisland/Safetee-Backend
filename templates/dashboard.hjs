@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/javascripts/account.min.js"></script>
+        <script src="/javascripts/wavesurfer.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+         <!-- jQuery -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="/stylesheets/dashboard.css" rel="stylesheet">
+        <script src="/javascripts/jquery-te-1.4.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/jquery-te-1.4.0.css">
+</head>
+<style>
+.pages{
+display:none;
+}
+.pagesa{
+display:none;
+}
+.ontop {
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: block;
+    display: none;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10000;
+    color: #fff;
+    padding: 20px;
+}
+.popup{
+ margin: auto;
+ margin-top: 5%;
+ padding: 20px;
+ background: #f3f3f3;
+ width: 100%;
+ font-size: 14px;
+ text-align: justify;
+}
+</style>
+<body style="background:#f7f7f7">
+<nav class="navbar navbar-default navbarnobottommargin">
+  <div class="container panel-title" style="padding:0pxborder:none;">
+    <div class="navbar-header" style="margin-top:5px;">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="logo-link blue" style="font-family:'Roboto';font-size:25px;">
+      Safetee
+      </a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+       <div class="col-md-5">
+          <ul class="nav navbar-nav">
+           <li class="active smallfont dropdown pointercursor">
+           <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+           <span id="activesort">{{recordsortx}}</span> <span class="caret"> </span></a>
+           <ul class="dropdown-menu dropdown-alerts">
+            <li class="smallfont pointercursor"><a onclick="javascript:sortrecord('My Cases');">My Cases</a></li>
+            <li class="divider"></li>
+            <li class="smallfont pointercursor"><a onclick="javascript:sortrecord('All Cases');">All Cases</a></li>
+            </ul>
+           </li>
+    </ul>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="javascript:history.back();"><span class="fa fa-chevron-left"></span></a></li>
+      <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      <span class="fa fa-bell"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-alerts">
+             <li></li>
+             </ul>
+      </li>
+      <li class="pagesa" style="display:{{showrecords}};" id="Articlesa"><a href="#" class="pointercursor Articlesa" onclick="explorepages('Articles')" id="Articlesac"><b>Articles</b> <span class="fa fa-chevron-right"></span></a></li>
+      <li class="pagesa" style="display:{{showposts}};" id="Recordsa"><a href="#" class="pointercursor Recordsa" onclick="explorepages('Records')" id="Recordsac"><span class="fa fa-chevron-left"></span> <b>Records</b></a></li>
+            <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      <b>{{ utitle }}</b>
+      <span class="fa  fa-ellipsis-h"></span>
+      </a>
+       <ul class="dropdown-menu">
+       <li><a href="/agency/logout" class="smallfont"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+       </ul>
+      </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+    <div class="container">
+        <div class="row">
+        <center><div id="userinfo"></div></center>
+
+<div class="pages" id="Records" style="display:{{showrecords}};">
+{{{records}}}
+</div>
+
+<div class="pages" id="Articles" style="display:{{showposts}};">
+<div class="pull-right orange pointercursor" style="text-align:center;" onclick="newpost();">
+<br/>
+<span class="fa fa-plus-circle" style="font-size:30px;"></span>
+<span style="display:block;">New Article</span>
+</div>
+<div style="clear:both;"></div>
+{{{posts}}}
+</div>
+
+
+<div id="openrecord" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header whitebg white">
+        <button type="button" class="close" data-dismiss="modal">
+        &times;</button>
+        <h4 class="modal-title black roboto" id="heading">....</h4>
+        <span class="smallfont blue pointercursor streamctrl2" style="display:none;" onclick="wavesurfer.playPause()">
+        <i class="glyphicon glyphicon-play"></i>
+        Play &middot;
+        <i class="glyphicon glyphicon-pause"></i>
+        Pause &middot;
+        </span>
+        <span class="streamctrl2 blue pointercursor" onclick="javascript:$('#streamctrl').css('display','block');" style="display:none;">
+         <i class="fa fa-equalizer"></i>
+         Equalizer
+         </span>
+        <div id="mnva-text" style="color:red;margin-top:10px;"></div>
+      </div>
+      <div class="modal-body">
+        <p>
+        <div id="innercontent"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default smallfont" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+</p>
+</div>
+  </div>
+</div>
+
+<div id="joincase" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header whitebg white">
+        <button type="button" class="close" data-dismiss="modal">
+        &times;</button>
+        <h4 class="modal-title black roboto" id="heading">What's next?</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        <div id="innercontent"></div>
+        Here are <span id="victim"></span>'s contact details so you could get in touch right away
+        <div>
+        <span class="fa fa-phone"></span>
+        <span class="phone"></span>
+        </div>
+        <div>
+        <span class="fa fa-at"></span>
+        <span class="email"></span>
+        </div>
+
+        Here are the list of agencies already collaborating on the case.
+        <div id="collaborate"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default smallfont" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+</p>
+</div>
+  </div>
+</div>
+
+
+<div id="newpost" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header whitebg white">
+        <button type="button" class="close" data-dismiss="modal">
+        &times;</button>
+        <h4 class="modal-title black roboto" id="heading">New Article</h4>
+      </div>
+      <form role="form" action="" method="post" onsubmit="validate_post()" encType="multipart/form-data"  id="postform">
+            <div class="modal-body">
+              <p>
+
+              <span class="btn btn-default smallfont pull-right" onclick="popup('useyoutube')"><i class="fa fa-youtube"></i> Add Youtube</span>
+               <div style="clear:both;"></div>
+
+              <div class="form-group">
+               <label>Title</label>
+                <input type="text" class="form-control" name="posttitle" id="posttitle" placeholder="">
+                </div>
+
+              <div class="form-group">
+               <label>Body</label>
+               <textarea class="form-control jqte-test" name="postbody" id="postbody" rows="3" placeholder=""></textarea>
+                </div>
+
+               <div class="form-group">
+               <label>Tags</label>
+                <input type="text" class="form-control" name="posttags" id="posttags" placeholder="Separate with comma">
+               </div>
+
+               <div class="form-group">
+               <label>Image</label>
+               <input type="file" class="form-control" name="filetoupload" id="filetoupload" accept="image/*">
+                </div>
+
+              </p>
+            </div>
+            <div class="modal-footer">
+            <input type="hidden" name="formsubmitted" value="addpost">
+              <button type="submit" class="btn btn-default bluebg white smallfont">Add Article</button>
+              <button type="button" class="btn btn-default smallfont" data-dismiss="modal">Cancel</button>
+            </div>
+            </form>
+    </div>
+</p>
+</div>
+  </div>
+</div>
+
+
+<div id="editpost" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header whitebg white">
+        <button type="button" class="close" data-dismiss="modal">
+        &times;</button>
+        <h4 class="modal-title black roboto" id="heading">New Post</h4>
+      </div>
+      <form role="form" action="" method="post" onsubmit="editpost()" encType="multipart/form-data" id="editpostform">
+            <div class="modal-body">
+              <p>
+
+
+              <div class="form-group">
+               <label>Title</label>
+                <input type="text" class="form-control" name="edittitle" id="edittitle" placeholder="">
+                </div>
+
+              <div class="form-group">
+               <label>Body</label>
+               <textarea class="form-control" name="editbody" id="editbody" rows="3" placeholder=""></textarea>
+                </div>
+
+               <div class="form-group">
+               <label>Tags</label>
+                <input type="text" class="form-control" name="edittags" id="edittags" placeholder="Separate with comma">
+               </div>
+
+               <div class="form-group">
+               <label>Image</label>
+               <input type="file" class="form-control" name="filetoupload" id="filetoupload" accept="image/*">
+                </div>
+
+              </p>
+            </div>
+            <div class="modal-footer">
+            <input type="hidden" name="formsubmitted" value="editpost">
+              <button type="submit" class="btn btn-default bluebg white smallfont">Save Changes</button>
+              <button type="button" class="btn btn-default smallfont" data-dismiss="modal">Cancel</button>
+            </div>
+            </form>
+    </div>
+</p>
+</div>
+  </div>
+</div>
+
+
+<div id="useyoutube" class="ontop">
+<p align="right" style="width:95%;margin-top:-30px;">
+<input type="button" value="X" class="btn btn-default" onclick="closepopup('useyoutube');"></input>
+</p>
+<div class="popup" style="background:#fff;overflow:auto;width:50%">
+
+<div class="form-group input-group">
+<span class="input-group-addon"><i class="fa fa-youtube"></i>
+</span>
+<input type="text" class="form-control" id="youtubeurl" placeholder="Youtube Video Link">
+</div>
+<input type="button" value="Add Video" class="btn btn-default smallfont" onclick="addyoutube();"></input>
+
+</div>
+</div>
+
+  <script>
+  $('.jqte-test').jqte();
+  $('.jqte-test').css('background','transparent');
+  $('.jqte-test').css('border','none');
+  $('.jqte-test').css('margin-top','-40px');
+
+  // settings of status
+  var jqteStatus = true;
+  $(".status").click(function(){
+    jqteStatus = jqteStatus ? false : true;
+$('.jqte-test').jqte({"status" : jqteStatus})});
+</script>

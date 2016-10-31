@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in | Agency {{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/javascripts/account.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+         <!-- jQuery -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="/stylesheets/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body style="background:#f7f7f7">
+<nav class="navbar navbar-default navbarnobottommargin">
+    <div class="container panel-title" style="padding:0pxborder:none;">
+        <div class="navbar-header" style="margin-top:5px;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="logo-link blue" style="font-family:'Roboto';font-size:25px;">
+                Safetee
+            </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="col-md-5">
+                <ul class="nav navbar-nav">
+
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:history.back();"><span class="fa fa-chevron-left"></span></a></li>
+                <li><a href="/agency/signup"><b>CREATE ACCOUNT</b> <span class="fa fa-chevron-right"></span></a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <b></b>
+                        <span class="fa  fa-ellipsis-h"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-md-offset-4">
+
+                <div class="login-panel panel panel-default" style="background:transparent">
+                 <div class="panel-heading" style="display:none;">
+                 <h2 class="" style="text-align:center;">SIGN IN</h2>
+                  </div>
+                    <div class="panel-body">
+                        <form role="form" action="" method="post" onsubmit="validate_signin()" id="signinform">
+                        <input type="hidden" name="formsubmitted" value="yes">
+                            <fieldset>
+                            <div id="userinfo" style="text-align:center;font-size:12px;margin-bottom:15px;">{{{ returninfo }}}</div>
+                                <div class="form-group">
+                                 <label>Email Address</label>
+                                    <input class="form-control" name="loginemail" type="text" value="test@gmail.com" autofocus>
+                                </div>
+                                <div class="form-group">
+                                <label>Password</label>
+                                    <input class="form-control" name="loginpassword" type="password" value="test">
+                                </div>
+                                <input type="hidden" name="action" value="login">
+                                <button type="submit" class="btn btn-lg btn-block bluebg white">Login</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="panel-heading" style="">
+                                        <h2 class="panel-title" style="text-align:center;font-size:12px;">
+                                        <a href="/agency/signup">
+                                        Don't have an account? sign up
+                                        </a>
+                                        </h2>
+                                        </div>
+                </div>
+            </div>
+        </div>
+    </div></body>
+</html>
