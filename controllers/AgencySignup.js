@@ -1,92 +1,98 @@
 var BaseController = require("./Base");
-var View = require("../views/Base");
-var mongoose = require('mongoose');
 var crypto = require("crypto");
-var fs = require("fs");
+var safetee = require("../models/Safetee");
+var safetee_response = require('../models/SafeteeResponse');
 var globalname = "Sign up";
 
 module.exports = BaseController.extend({
     name: globalname,
     run: function(req, res, next) {
-            var self = this;
-            var v = new View(res, 'signup');
+        //
             self.form(req, res, function(formMarkup) {
-                v.render({
+                //
+                safetee_response.returnresponse['render'](req,'signup',{
                     title: globalname,
                     form:formMarkup,
                     showformornot:'block'
-                });
+                },res);
+                //
             });
     },
     form: function(req, res, callback) {
-        var returnResponse = function(response,showform) {
-            if(response == ''){
-                res.render('signup', {title:globalname});
-            }else {
-                res.render('signup', {title:"Account Created",returninfo:response,showformornot:showform});
-            }
-        };
-        var returnError = function(response,showform) {
-            if(response == ''){
-                res.render('signup', {title:globalname});
-            }else {
-                res.render('signup', {title:"Ooops",returninfo:response,showformornot:showform});
-            }
-        };
+        //
         if(req.body && req.body.formsubmitted && req.body.formsubmitted == 'yes') {
-           //collect form data
-            var type = req.body.agencytype,
-            title = req.body.agencytitle,
-            name = req.body.agencyname,
-            phone_no = req.body.agencyphone,
-            email = req.body.agencyemail,
-            password = req.body.agencypassword,
-            address = req.body.agencyaddress,
-            about = req.body.agencyabout,
-            website = req.body.website,
-            facebook = req.body.facebook,
-            currentdate = new Date(),
-            datetimenow = currentdate.getDate() + "/"
-                + (currentdate.getMonth()+1)  + "/"
-                + currentdate.getFullYear() + "  "
-                + currentdate.getHours() + ":"
-                + currentdate.getMinutes() + ":"
-                + currentdate.getSeconds(),
-            created = datetimenow;
-            mongoose.model('agents').find({contact_email:email}, function(err, checkuser) {
-                if (checkuser != "") {
-                    returnError('<font color="red">Agency with the submitted email address, '+email+' exists already</font>','block');
-                }else{
-                    var data = {type:type,
-                        name:title,
-                        contact_person:name,
-                        contact_email:email,
-                        contact_phone:phone_no,
-                        website:website,
-                        facebook:facebook,
-                        about:about,
-                        address:address,
-                        password:password,
-                        created:Date.now(),
-                        auth:0
+           //
+            var type = req.body.agencytype;
+            var title = req.body.agencytitle;
+            var name = req.body.agencyname;
+            var phone_no = req.body.agencyphone;
+            var email = req.body.agencyemail;
+            var password = req.body.agencypassword;
+            var address = req.body.agencyaddress;
+            var about = req.body.agencyabout;
+            var website = req.body.website;
+            var facebook = req.body.facebook;
+            //
+            var data = {type:type,
+                name:title,
+                contact_person:name,
+                contact_email:email,
+                contact_phone:phone_no,
+                website:website,
+                facebook:facebook,
+                about:about,
+                address:address,
+                password:password,
+                created:safetee.datetimenow,
+                auth:0
+            };
+            //
+            safetee['agents'].find({contact_email:data.email}, function(err, checkagent) {
+                //
+                if (checkagent.length > 0) {
+                    //
+                    console.log(JSON.stringify(checkagent));
+                    //
+                    console.log(safetee_response.getresponse['user_signup']('exists'));
+                    //
+                    return_data = {
+                        success: 0,
+                        message: safetee_response.getresponse['user_signup']('exists')
                     };
-                    mongoose.model('agents').create(data, function(err, response) {
+                    //
+                    safetee_response.returnresponse['render'](req,'signup',{
+                        title: globalname,
+                        returninfo:return_data.message,
+                        showformornot:'block'
+                    },res);
+                    //
+                }else{
+                    //
+                    safetee['agents'].create(data, function(err, newagent) {
+                        //
                         if(err){
-                            console.log(response);
-                            returnResponse('<b>An error occurred, please try again later.</b>', 'none');
-
+                            //
+                            safetee_response.returnresponse['render'](req,'signup',{
+                                title: globalname,
+                                returninfo:safetee_response.getresponse['error'](req),
+                                showformornot:'none'
+                            },res);
+                            //
                         }else {
-                            console.log(response);
-                            returnResponse('<b>Account was successfully created, we will get in touch as soon as we are done reviewing your submitted data.</b>', 'none');
+                            //
+                            safetee_response.returnresponse['render'](req,'signup',{
+                                title: globalname,
+                                returninfo:safetee_response.getresponse['user_signup']('success_agency'),
+                                showformornot:'none'
+                            },res);
                         }
                         });
-                    //account create end
                 }
             });
 
         }else{
-            //show full page
-            returnResponse('');
+            //
+            callback('');
         }
     }
 });

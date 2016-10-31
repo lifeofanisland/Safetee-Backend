@@ -35,10 +35,13 @@ var GetResponse_ = ({
                 return 'Create new acccount';
             break;
             case 'exists':
-                return 'User with email address, ' + req + ' exists already';
+                return 'User with email address exists already';
             break;
             case 'success':
                 return 'Account was created';
+            break;
+            case 'success_agency':
+                return 'Account was successfully created, we will get in touch as soon as we are done reviewing your submitted data.';
             break;
         }
     },

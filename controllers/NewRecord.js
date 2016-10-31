@@ -73,7 +73,7 @@ module.exports = BaseController.extend({
         var data = fs.readFileSync(req.files.record.path);
         var audioid = crypto.randomBytes(10).toString('hex');
         var fileName = audioid+"_"+Date.now()+"_"+req.files.record.name;
-        var dir = "/root/SafeteeJsFlex/public/records/";
+        var dir = "/root/SafeteeJsFlex/public/records";
         fs.writeFileSync(dir + "/" + fileName, data);
         return '/records/' + fileName;
     }

@@ -140,7 +140,7 @@ module.exports = BaseController.extend({
             });
 
         }else{
-            //show full page
+            //
             callback('');
         }
     }
