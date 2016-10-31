@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Dashboard.js" afterPath="$PROJECT_DIR$/controllers/Dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/SafeteeResponse.js" afterPath="$PROJECT_DIR$/models/SafeteeResponse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dashboard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -69,6 +68,16 @@
                 <marker date="1477929050149" expanded="true" signature="4633:4754" ph="..." />
                 <marker date="1477929050149" expanded="true" signature="4661:4728" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,7 +133,6 @@
         <option value="$PROJECT_DIR$/controllers/Inspections.js" />
         <option value="$PROJECT_DIR$/controllers/ScheduleInspection.js" />
         <option value="$PROJECT_DIR$/tests/mongodb.spec.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/dist/css/sb-admin-2.css" />
         <option value="F:/localweb/safeteejs/audiovisuals.php" />
         <option value="F:/localweb/ezplanner/mastdashboard2.php" />
@@ -169,6 +177,7 @@
         <option value="$PROJECT_DIR$/controllers/NewRecord.js" />
         <option value="$PROJECT_DIR$/models/SafeteeResponse.js" />
         <option value="$PROJECT_DIR$/controllers/Dashboard.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -413,7 +422,7 @@
       <workItem from="1476362623888" duration="5028000" />
       <workItem from="1476387107773" duration="807000" />
       <workItem from="1477902631882" duration="17985000" />
-      <workItem from="1477928380475" duration="667000" />
+      <workItem from="1477928380475" duration="960000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -489,10 +498,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183012000" />
+    <option name="totallyTimeSpent" value="183305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13689604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -560,13 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://F:/localweb/ezplanner/mastdashboard2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="128" column="8" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/response.hjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -917,6 +919,14 @@
             <marker date="1477929050149" expanded="true" signature="4633:4754" ph="..." />
             <marker date="1477929050149" expanded="true" signature="4661:4728" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

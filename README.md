@@ -1,2 +1,2 @@
-# Safetee-Dashboard
-This is the Dashboard of Safetee App
+# Safetee-Backend
+This is the Backend of Safetee App
