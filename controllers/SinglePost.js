@@ -1,20 +1,15 @@
-var BaseController = require("./Base"),
-    mgdb = require('mongodb'),
-    View = require("../views/Base"),
-    globalname = "Single Post";
+var BaseController = require("./Base");
+var safetee = require("../models/Safetee");
+var safetee_response = require('../models/SafeteeResponse');
+var globalname = "Article";
 
 module.exports = BaseController.extend({
-    content: null,
+    //
     run: function(req, res, next) {
-        model.setDB(req.db);
-        var self = this;
-        model.getAPost(new mgdb.ObjectID(req.body.id),function(err, records) {
-            var data = {
-                "article":records
-            };
-            self.content = JSON.stringify(data);
-            console.log(self.content);
-            res.send(self.content);
+        //
+        safetee['articles'].find({_id:req.params.id},function(err, article) {
+            safetee_response.returnresponse['send'](article);
         });
+        //
     }
 });

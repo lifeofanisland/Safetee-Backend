@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ARecord.js" afterPath="$PROJECT_DIR$/controllers/ARecord.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/AgencySignup.js" afterPath="$PROJECT_DIR$/controllers/AgencySignup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Dashboard.js" afterPath="$PROJECT_DIR$/controllers/Dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Signup.js" afterPath="$PROJECT_DIR$/controllers/Signup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Articles.js" afterPath="$PROJECT_DIR$/controllers/Articles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/RecordStream.js" afterPath="$PROJECT_DIR$/controllers/RecordStream.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/Records.js" afterPath="$PROJECT_DIR$/controllers/Records.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/SinglePost.js" afterPath="$PROJECT_DIR$/controllers/SinglePost.js" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,21 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ARecord.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ARecord.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/ARecord.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <caret line="14" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -61,7 +51,7 @@
       <file leaf-file-name="Safetee.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Safetee.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="143">
               <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
               <folding />
             </state>
@@ -83,6 +73,56 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1105">
               <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Articles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/Articles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Records.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/Records.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SinglePost.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/SinglePost.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecordStream.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/RecordStream.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TakeLeaveCase.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/TakeLeaveCase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -124,7 +164,6 @@
         <option value="$PROJECT_DIR$/templates/signup.hjs" />
         <option value="$PROJECT_DIR$/public/javascripts/account.min.js" />
         <option value="$PROJECT_DIR$/controllers/Index.hjs" />
-        <option value="$PROJECT_DIR$/controllers/Articles.js" />
         <option value="$PROJECT_DIR$/templates/index.hjs" />
         <option value="$PROJECT_DIR$/public/javascripts/portal.min.js" />
         <option value="$PROJECT_DIR$/models/ContentModel.js" />
@@ -133,9 +172,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/models/ContentModel2.js" />
         <option value="$PROJECT_DIR$/models/Base2.js" />
-        <option value="$PROJECT_DIR$/controllers/Records.js" />
-        <option value="$PROJECT_DIR$/controllers/RecordStream.js" />
-        <option value="$PROJECT_DIR$/controllers/SinglePost.js" />
         <option value="$PROJECT_DIR$/controllers/TakeLeaveCase.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/models/Base.js" />
@@ -154,6 +190,10 @@
         <option value="$PROJECT_DIR$/controllers/Signup.js" />
         <option value="$PROJECT_DIR$/controllers/Dashboard.js" />
         <option value="$PROJECT_DIR$/controllers/ARecord.js" />
+        <option value="$PROJECT_DIR$/controllers/Articles.js" />
+        <option value="$PROJECT_DIR$/controllers/Records.js" />
+        <option value="$PROJECT_DIR$/controllers/SinglePost.js" />
+        <option value="$PROJECT_DIR$/controllers/RecordStream.js" />
       </list>
     </option>
   </component>
@@ -412,7 +452,7 @@
       <workItem from="1476362623888" duration="5028000" />
       <workItem from="1476387107773" duration="807000" />
       <workItem from="1477902631882" duration="17985000" />
-      <workItem from="1477928380475" duration="4855000" />
+      <workItem from="1477928380475" duration="5351000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -488,7 +528,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187200000" />
+    <option name="totallyTimeSpent" value="187696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -724,41 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Articles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Records.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/RecordStream.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/SinglePost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/TakeLeaveCase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/Base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -822,14 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Safetee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -918,7 +915,55 @@
     <entry file="file://$PROJECT_DIR$/controllers/ARecord.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
+          <caret line="14" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Safetee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Records.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
           <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/SinglePost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/RecordStream.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/TakeLeaveCase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
           <folding />
         </state>
       </provider>
