@@ -1,5 +1,5 @@
 var BaseController = require("./Base");
-var View = require("../views/Base");
+var crypto = require("crypto");
 var safetee = require("../models/Safetee");
 var safetee_response = require('../models/SafeteeResponse');
 var safetee_auth = require("../models/SafeteeAuth");
@@ -115,6 +115,8 @@ module.exports = BaseController.extend({
             //
             var email = req.body.loginemail;
             var password = req.body.loginpassword;
+            //
+            password = crypto.createHash('md5').update(password).digest("hex");
             //
             var data = {
                 "email":email,

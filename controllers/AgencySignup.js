@@ -33,6 +33,8 @@ module.exports = BaseController.extend({
             var website = req.body.website;
             var facebook = req.body.facebook;
             //
+            password = crypto.createHash('md5').update(password).digest("hex");
+            //
             var data = {type:type,
                 name:title,
                 contact_person:name,
