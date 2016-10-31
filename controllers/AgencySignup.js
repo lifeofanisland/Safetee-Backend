@@ -5,7 +5,7 @@ var safetee_response = require('../models/SafeteeResponse');
 var globalname = "Sign up";
 
 module.exports = BaseController.extend({
-    name: globalname,
+    //
     run: function(req, res, next) {
         //
             self.form(req, res, function(formMarkup) {

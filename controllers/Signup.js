@@ -6,7 +6,7 @@ var globalname = "Sign up";
 var return_data = '';
 //
 module.exports = BaseController.extend({
-    name: globalname,
+    //
     run: function (req, res) {
         //
         if (req.body && req.body.form && req.body.form == 'go') {

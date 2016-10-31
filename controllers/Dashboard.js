@@ -7,7 +7,7 @@ var globalname = "Dashboard";
 var showrecords = '';
 //
 module.exports = BaseController.extend({
-    name: globalname,
+    //
     run: function(req, res, next) {
         var self = this;
         //
