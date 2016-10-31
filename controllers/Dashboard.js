@@ -42,7 +42,7 @@ module.exports = BaseController.extend({
             self.login(req, res, function (loginMarkup) {
                 //
                 safetee_response.returnresponse['render'](req,'signin',{
-                    title: 'Please Log In',
+                    title: safetee_response.getresponse['user_signin']('title'),
                     login: loginMarkup
                 },res);
             });

@@ -31,6 +31,9 @@ var GetResponse_ = ({
     //
     user_signup: function (req) {
         switch (req){
+            case 'title':
+                return 'Create new acccount';
+            break;
             case 'exists':
                 return 'User with email address, ' + req + ' exists already';
             break;
@@ -41,6 +44,9 @@ var GetResponse_ = ({
     },
     user_signin: function (req) {
         switch (req){
+            case 'title':
+                return 'Please log in';
+                break;
             case 'notfound':
                 return 'incorrect login credentials';
                 break;
