@@ -45,6 +45,7 @@ var GetResponse_ = ({
             break;
         }
     },
+    //
     user_signin: function (req) {
         switch (req){
             case 'title':
@@ -58,11 +59,20 @@ var GetResponse_ = ({
                 break;
         }
     },
+    //
     new_record: function (req) {
         switch (req){
             case 'success':
                 return 'Record successfully sent';
                 break;
+        }
+    },
+    //
+    page_title:function (req) {
+        switch (req){
+            case 'index':
+                return 'Welcome to Safetee';
+            break;
         }
     }
     //

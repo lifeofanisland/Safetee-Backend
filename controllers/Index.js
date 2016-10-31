@@ -1,12 +1,15 @@
-var BaseController = require("./Base"),
-    mgdb = require('mongodb'),
-    View = require("../views/Base"),
-    globalname = "Index";
+var BaseController = require("./Base");
+var safetee = require("../models/Safetee");
+var safetee_response = require('../models/SafeteeResponse');
+var globalname = safetee_response.getresponse['page_title']('index');
 
 module.exports = BaseController.extend({
-    content: null,
+    //
     run: function(req, res, next) {
-        model.setDB(req.db);
-        res.render('index');
+        //
+        safetee_response.returnresponse['render'](req,'index',{
+            title: globalname
+        },res);
+        //
     }
 });
