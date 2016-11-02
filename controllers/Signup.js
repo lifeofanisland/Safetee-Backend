@@ -1,11 +1,8 @@
-var BaseController = require("./Base");
-var safetee = require("../models/Safetee");
-var safetee_response = require('../models/SafeteeResponse');
-var crypto = require("crypto");
-var globalname = "Sign up";
-var return_data = '';
+var safetee_buffer = require('../models/Safetee_Head_Buffer');
+
 //
-module.exports = BaseController.extend({
+
+module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function (req, res) {
         //
@@ -18,7 +15,7 @@ module.exports = BaseController.extend({
             var password = req.body.password;
             var location = req.body.location;
             //
-            password = crypto.createHash('md5').update(password).digest("hex");
+            password = safetee_buffer.safetee_crypto.createHash('md5').update(password).digest("hex");
             //
             var data = {
                 "name": name,
@@ -27,64 +24,64 @@ module.exports = BaseController.extend({
                 "sex": sex,
                 "password": password,
                 "location": location,
-                "created": safetee.datetimenow
+                "created": safetee_buffer.safetee.datetimenow
             };
             //
-            safetee['users'].find({email:data.email}, function (err, checkuser) {
+            safetee_buffer.safetee['users'].find({email:data.email}, function (err, checkuser) {
                 //
                 if (checkuser.length > 0) {
                     //
                     console.log(JSON.stringify(checkuser));
                     //
-                    console.log(safetee_response.getresponse['user_signup']('exists'));
+                    console.log(safetee_buffer.safetee_response.getresponse['user_signup']('exists'));
                     //
-                    return_data = {
+                    safetee_buffer.safetee_return_data = {
                         success: 0,
-                        message: safetee_response.getresponse['user_signup']('exists')
+                        message: safetee_buffer.safetee_response.getresponse['user_signup']('exists')
                     };
                     //
-                    safetee_response.returnresponse['send'](return_data,res);
+                    safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
                     //
                 } else {
                     //
-                    safetee['users'].create(data, function (err, newuser) {
+                    safetee_buffer.safetee['users'].create(data, function (err, newuser) {
                         //
                         if(err){
                             //
-                            console.log(safetee_response.getresponse['error'](req));
+                            console.log(safetee_buffer.safetee_response.getresponse['error'](req));
                             //
-                            return_data = {
+                            safetee_buffer.safetee_return_data = {
                                 success: 0,
-                                message: safetee_response.getresponse['error'](req)
+                                message: safetee_buffer.safetee_response.getresponse['error'](req)
                             };
                             //
-                            safetee_response.returnresponse['send'](return_data,res);
+                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
                             //
                         }else {
                             //
-                            console.log(safetee_response.getresponse['user_signup']('success'));
+                            console.log(safetee_buffer.safetee_response.getresponse['user_signup']('success'));
                             //
-                            return_data = {
+                            safetee_buffer.safetee_return_data = {
                                 success: 1,
-                                message: safetee_response.getresponse['user_signup']('success'),
+                                message: safetee_buffer.safetee_response.getresponse['user_signup']('success'),
                                 info: JSON.stringify(newuser)
                             };
                             //
-                            safetee_response.returnresponse['send'](return_data,res);
+                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
                         }
                     });
                 }
             });
         } else {
             //
-            console.log(safetee_response.getresponse['no_form_data'](req));
+            console.log(safetee_buffer.safetee_response.getresponse['no_form_data'](req));
             //
-            return_data = {
+            safetee_buffer.safetee_return_data = {
                 success: 0,
-                message: safetee_response.getresponse['no_form_data'](req)
+                message: safetee_buffer.safetee_response.getresponse['no_form_data'](req)
             };
             //
-            safetee_response.returnresponse['send'](return_data,res);
+            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
         }
 
     }
