@@ -20,6 +20,7 @@ var AgencySignup = require('./controllers/AgencySignup');
 var AgencySignin = require('./controllers/Dashboard');
 var AgencySignout = require('./controllers/AgencySignout');
 var NewRecord = require('./controllers/NewRecord');
+var AudioUpload = require('./controllers/AudioUpload');
 var Records = require('./controllers/Records');
 var ARecord = require('./controllers/ARecord');
 var RecordStream = require('./controllers/RecordStream');
@@ -84,6 +85,9 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         });
         app.all('/record/add', function (req, res, next) {
             NewRecord.run(req, res, next);
+        });
+        app.all('/audio/upload', function (req, res, next) {
+            AudioUpload.run(req, res, next);
         });
         app.all('/records/get/:id', function (req, res, next) {
             Records.run(req, res, next);
