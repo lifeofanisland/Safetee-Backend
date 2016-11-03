@@ -7,7 +7,7 @@ module.exports = BaseController.extend({
     //
     run: function(req, res, next) {
         //
-        safetee_response.returnresponse['render'](req,'index',{
+        safetee_response.returnresponse['render'](req,'test',{
             title: globalname
         },res);
         //

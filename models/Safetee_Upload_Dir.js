@@ -2,7 +2,7 @@
 var Audio_Upload_Dir = ({
     //
     audio_dir: function (req) {
-        return '../public/records';
+        return './public/records';
     }
     //
 });

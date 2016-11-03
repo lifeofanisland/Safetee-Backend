@@ -60,7 +60,7 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
 
         //
         app.all('/', function (req, res, next) {
-            AgencySignin.run(req, res, next);
+            Index.run(req, res, next);
         });
         app.all('/user/signup', function (req, res, next) {
             Signup.run(req, res, next);
