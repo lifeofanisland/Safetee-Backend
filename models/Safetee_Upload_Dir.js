@@ -6,7 +6,8 @@ var Audio_Upload_Dir = ({
     },
     //
     audio_dir_heroku: function (req) {
-        return '/../../public/records';
+        //console.log(__dirname);
+        return '/../public/records';
     }
     //
 });
