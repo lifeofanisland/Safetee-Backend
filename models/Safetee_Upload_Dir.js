@@ -1,8 +1,12 @@
 //
 var Audio_Upload_Dir = ({
     //
-    audio_dir: function (req) {
+    audio_dir_windows: function (req) {
         return './public/records';
+    },
+    //
+    audio_dir_heroku: function (req) {
+        return '/root/Safetee-Backend/public/records';
     }
     //
 });
