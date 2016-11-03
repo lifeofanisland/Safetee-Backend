@@ -46,7 +46,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
         var data = safetee_buffer.safetee_filesync.readFileSync(req.files.record.path);
         var audioid = safetee_buffer.safetee_crypto.randomBytes(10).toString('hex');
         var fileName = audioid + "_" + Date.now() + "_" + req.files.record.name;
-        var dir = safetee_buffer.safetee_dir.audio_upload_dir['audio_dir_heroku'](req);
+        var dir = __dirname + safetee_buffer.safetee_dir.audio_upload_dir['audio_dir_heroku'](req);
         console.log(dir);
         safetee_buffer.safetee_filesync.writeFileSync(dir + "/" + fileName, data);
         callback(safetee_buffer.safetee_var.url['host_url'](req) + '/records/' + fileName);
