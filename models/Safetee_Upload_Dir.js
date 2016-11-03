@@ -7,7 +7,7 @@ var Audio_Upload_Dir = ({
     //
     audio_dir_heroku: function (req) {
         //console.log(__dirname);
-        return '../../tmp/build_b0b4be187e2b7dab2261f429c2abbabc/lifeofanisland-Safetee-Backend-3aefac1/public/records';
+        return '../../app/public/records';
     }
     //
 });
