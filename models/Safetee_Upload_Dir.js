@@ -6,7 +6,7 @@ var Audio_Upload_Dir = ({
     },
     //
     audio_dir_heroku: function (req) {
-        return '/root/lifeofanisland/Safetee-Backend/public/records';
+        return '/../../public/records';
     }
     //
 });
