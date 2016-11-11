@@ -68,34 +68,34 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         app.all('/', function (req, res, next) {
             Index.run(req, res, next);
         });
-        app.all('/api/user/signup', function (req, res, next) {
+        app.all('/api/v1/user/signup', function (req, res, next) {
             Signup.run(req, res, next);
         });
-        app.all('/api/user/login', function (req, res, next) {
+        app.all('/api/v1/user/login', function (req, res, next) {
             Signin.run(req, res, next);
         });
-        app.all('/api/record/add', function (req, res, next) {
+        app.all('/api/v1/record/add', function (req, res, next) {
             NewRecord.run(req, res, next);
         });
-        app.all('/api/audio/upload', function (req, res, next) {
+        app.all('/api/v1/audio/upload', function (req, res, next) {
             AudioUpload.run(req, res, next);
         });
-        app.all('/api/records/get/:id', function (req, res, next) {
+        app.all('/api/v1/records/get/:id', function (req, res, next) {
             Records.run(req, res, next);
         });
-        app.all('/api/record/get/:id', function (req, res, next) {
+        app.all('/api/v1/record/get/:id', function (req, res, next) {
             ARecord.run(req, res, next);
         });
-        app.all('/api/tips/get', function (req, res, next) {
+        app.all('/api/v1/tips/get', function (req, res, next) {
             Tips.run(req, res, next);
         });
-        app.all('/api/tip/get/:id', function (req, res, next) {
+        app.all('/api/v1/tip/get/:id', function (req, res, next) {
             ATip.run(req, res, next);
         });
-        app.all('/api/agencies/get/:id', function (req, res, next) {
+        app.all('/api/v1/agencies/get/:id', function (req, res, next) {
             AgenciesAround.run(req);
         });
-        app.all('/api/agency/get/:id', function (req, res, next) {
+        app.all('/api/v1/agency/get/:id', function (req, res, next) {
             AnAgencyAround.run(req, res, next);
         });
         //Agency Run
