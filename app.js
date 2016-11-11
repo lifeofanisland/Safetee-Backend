@@ -87,16 +87,16 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
             ARecord.run(req, res, next);
         });
         app.all('/api/tips/get', function (req, res, next) {
-            Tips.run();
+            Tips.run(req, res, next);
         });
         app.all('/api/tip/get/:id', function (req, res, next) {
-            ATip.run(req);
+            ATip.run(req, res, next);
         });
         app.all('/api/agencies/get/:id', function (req, res, next) {
             AgenciesAround.run(req);
         });
         app.all('/api/agency/get/:id', function (req, res, next) {
-            AnAgencyAround.run(req);
+            AnAgencyAround.run(req, res, next);
         });
         //Agency Run
         //

@@ -34,6 +34,11 @@ var GetResponse_ = ({
         return 'Aw! snap, an error was encountered';
     },
     //
+    no_content: function () {
+        //
+        return 'Oh! snap, no content available for this query';
+    },
+    //
     user_signup: function (req) {
         //
         switch (req){
@@ -92,7 +97,6 @@ var GetResponse_ = ({
                 return 'Circle(s) added successfully';
             break;
         }
-
     }
 });
 
