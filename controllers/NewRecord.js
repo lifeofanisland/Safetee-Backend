@@ -5,7 +5,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function(req, res) {
         //
-        if(typeof req.files.record !== 'undefined') {
+        if(typeof req.files.record !== 'undefined' && typeof req.body.sender !== 'undefined' && typeof req.body.location !== 'undefined') {
             //
             this.AudioUpload(req, function (audio_url) {
                 //

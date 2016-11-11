@@ -38,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="91" column="64" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
+            <state relative-caret-position="327">
+              <caret line="76" column="31" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -53,6 +53,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewRecord.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/NewRecord.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="136" selection-start-line="7" selection-start-column="136" selection-end-line="7" selection-end-column="136" />
               <folding />
             </state>
           </provider>
@@ -113,7 +123,6 @@
         <option value="$PROJECT_DIR$/models/Safetee_Upload_Dir.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/controllers/NewRecord.js" />
         <option value="$PROJECT_DIR$/controllers/Signin.js" />
         <option value="$PROJECT_DIR$/controllers/ARecord.js" />
         <option value="$PROJECT_DIR$/controllers/NGOsAround.js" />
@@ -127,6 +136,7 @@
         <option value="$PROJECT_DIR$/models/Safetee.js" />
         <option value="$PROJECT_DIR$/controllers/Signup.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/controllers/NewRecord.js" />
       </list>
     </option>
   </component>
@@ -340,7 +350,7 @@
       <workItem from="1477902631882" duration="17985000" />
       <workItem from="1477928380475" duration="5965000" />
       <workItem from="1478070566883" duration="15069000" />
-      <workItem from="1478847889265" duration="10165000" />
+      <workItem from="1478847889265" duration="10613000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -430,7 +440,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213544000" />
+    <option name="totallyTimeSpent" value="213992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -759,14 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/NewRecord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/TakeLeaveCase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
@@ -849,8 +851,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="91" column="64" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
+        <state relative-caret-position="327">
+          <caret line="76" column="31" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/NewRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="136" selection-start-line="7" selection-start-column="136" selection-end-line="7" selection-end-column="136" />
           <folding />
         </state>
       </provider>
