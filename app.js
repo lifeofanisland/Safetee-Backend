@@ -16,13 +16,18 @@ var store = new MongoDBStore(
 var Index = require('./controllers/Index');
 var Signup = require('./controllers/Signup');
 var Signin = require('./controllers/Signin');
-var AgencySignup = require('./controllers/AgencySignup');
-var AgencySignin = require('./controllers/Dashboard');
-var AgencySignout = require('./controllers/AgencySignout');
 var NewRecord = require('./controllers/NewRecord');
 var AudioUpload = require('./controllers/AudioUpload');
 var Records = require('./controllers/Records');
 var ARecord = require('./controllers/ARecord');
+var Tips = require('./controllers/SafeteeTips');
+var ATip = require('./controllers/ASafeteeTip');
+var AgenciesAround = require('./controllers/AgenciesAround');
+var AnAgencyAround = require('./controllers/AnAgencyAround');
+//
+var AgencySignup = require('./controllers/AgencySignup');
+var AgencySignin = require('./controllers/Dashboard');
+var AgencySignout = require('./controllers/AgencySignout');
 var RecordStream = require('./controllers/RecordStream');
 var TakeLeaveCase = require('./controllers/TakeLeaveCase');
 // all environments
@@ -39,7 +44,7 @@ app.use(app.router);
 app.use(require('less-middleware')({src: __dirname + '/public'}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('express-session')({
-    secret: 'safetee_backend_rocks_onMicassa_!!!!',
+    secret: 'safetee_backend_rocks_on_Micassa_!!!!',
     cookie: {
         maxAge: 24 * 60 * 60 * 1000 // 1 day
     },
@@ -58,16 +63,43 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         console.log('Sorry, there is no mongo db server running.');
     } else {
 
+        //API Run
         //
         app.all('/', function (req, res, next) {
             Index.run(req, res, next);
         });
-        app.all('/user/signup', function (req, res, next) {
+        app.all('/api/user/signup', function (req, res, next) {
             Signup.run(req, res, next);
         });
-        app.all('/user/login', function (req, res, next) {
+        app.all('/api/user/login', function (req, res, next) {
             Signin.run(req, res, next);
         });
+        app.all('/api/record/add', function (req, res, next) {
+            NewRecord.run(req, res, next);
+        });
+        app.all('/api/audio/upload', function (req, res, next) {
+            AudioUpload.run(req, res, next);
+        });
+        app.all('/api/records/get/:id', function (req, res, next) {
+            Records.run(req, res, next);
+        });
+        app.all('/api/record/get/:id', function (req, res, next) {
+            ARecord.run(req, res, next);
+        });
+        app.all('/api/tips/get', function (req, res, next) {
+            Tips.run();
+        });
+        app.all('/api/tip/get/:id', function (req, res, next) {
+            ATip.run(req);
+        });
+        app.all('/api/agencies/get/:id', function (req, res, next) {
+            AgenciesAround.run(req);
+        });
+        app.all('/api/agency/get/:id', function (req, res, next) {
+            AnAgencyAround.run(req);
+        });
+        //Agency Run
+        //
         app.all('/agency/signup', function (req, res, next) {
             AgencySignup.run(req, res, next);
         });
@@ -82,18 +114,6 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         });
         app.all('/agency/takeleavecase', function (req, res, next) {
             TakeLeaveCase.run(req, res, next);
-        });
-        app.all('/record/add', function (req, res, next) {
-            NewRecord.run(req, res, next);
-        });
-        app.all('/audio/upload', function (req, res, next) {
-            AudioUpload.run(req, res, next);
-        });
-        app.all('/records/get/:id', function (req, res, next) {
-            Records.run(req, res, next);
-        });
-        app.all('/record/:id', function (req, res, next) {
-            ARecord.run(req, res, next);
         });
         http.createServer(app).listen(app.get('port'), function () {
             console.log(
