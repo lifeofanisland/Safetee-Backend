@@ -12,10 +12,10 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
             var circle = req.body.circle;
             //
             var data = {
-
+               circle: circle
             };
             //
-            safetee_buffer.safetee['users'].create(data, function (err, newuser) {
+            safetee_buffer.safetee['users'].update({_id: sender}, data, function (err, newuser) {
                 //
                 if (err) {
                     //

@@ -24,7 +24,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 "sex": sex,
                 "password": password,
                 "location": location,
-                "circle": [],
+                "circle": '',
                 "created": safetee_buffer.safetee.datetimenow
             };
             //
