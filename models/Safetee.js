@@ -69,7 +69,7 @@ var users_ = mongoose.model('users', UserSchema);
 var agents_ = mongoose.model('agents', AgentsSchema);
 var articles_ = mongoose.model('articles', ArticlesSchema);
 var records_ = mongoose.model('records', RecordsSchema);
-var tips_ = mongoose.model('records', TipsSchema);
+var tips_ = mongoose.model('tips', TipsSchema);
 //
 module.exports = {
     datetimenow:datetimenow_,
