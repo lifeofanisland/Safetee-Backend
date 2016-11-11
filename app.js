@@ -24,6 +24,7 @@ var Tips = require('./controllers/SafeteeTips');
 var ATip = require('./controllers/ASafeteeTip');
 var AgenciesAround = require('./controllers/AgenciesAround');
 var AnAgencyAround = require('./controllers/AnAgencyAround');
+var PutCircle = require('./controllers/PutCircles');
 //
 var AgencySignup = require('./controllers/AgencySignup');
 var AgencySignin = require('./controllers/Dashboard');
@@ -73,6 +74,9 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         });
         app.all('/api/v1/user/login', function (req, res, next) {
             Signin.run(req, res, next);
+        });
+        app.all('/api/v1/user/circle/add', function (req, res, next) {
+            PutCircle.run(req, res, next);
         });
         app.all('/api/v1/record/add', function (req, res, next) {
             NewRecord.run(req, res, next);
