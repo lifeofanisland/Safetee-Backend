@@ -6,7 +6,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function (req, res) {
         //
-        if (req.body && req.body.form && req.body.form == 'go') {
+        if(req.body && req.body.email && typeof req.body.email !== 'undefined' && req.body.password &&  typeof req.body.password !== 'undefined' && req.body.name &&  typeof req.body.name !== 'undefined' && req.body.phone_no &&  typeof req.body.phone_no !== 'undefined') {
             //
             var name = req.body.name;
             var phone_no = req.body.phone_no;
@@ -24,6 +24,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 "sex": sex,
                 "password": password,
                 "location": location,
+                "circle": [],
                 "created": safetee_buffer.safetee.datetimenow
             };
             //

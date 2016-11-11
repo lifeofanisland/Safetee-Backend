@@ -18,6 +18,7 @@ var UserSchema = new Schema ({
     sex: String,
     password: String,
     location: String,
+    circle: String,
     created: { type: Date, default: Date.now}
 
 });
@@ -56,10 +57,19 @@ var RecordsSchema = new Schema({
     share: String
 });
 //
+var TipsSchema = new Schema({
+    sender: String,
+    title: String,
+    body: String,
+    category: String,
+    created: { type: Date, default: Date.now}
+})
+//
 var users_ = mongoose.model('users', UserSchema);
 var agents_ = mongoose.model('agents', AgentsSchema);
 var articles_ = mongoose.model('articles', ArticlesSchema);
 var records_ = mongoose.model('records', RecordsSchema);
+var tips_ = mongoose.model('records', TipsSchema);
 //
 module.exports = {
     datetimenow:datetimenow_,
@@ -67,4 +77,6 @@ module.exports = {
     agents:agents_,
     articles:articles_,
     records:records_,
+    tips:tips_
+
 }

@@ -4,10 +4,12 @@ var ReturnResponse_ = ({
     send: function (req, res) {
         //
         console.log(JSON.stringify(req));
+        //
         res.send(JSON.stringify(req));
     },
     //
     render: function (req, page, initials, res) {
+        //
         res.render(
             page,
             initials
@@ -15,6 +17,7 @@ var ReturnResponse_ = ({
     },
     //
     redirect: function (req, page, res) {
+        //
         res.redirect(page);
     }
 });
@@ -22,14 +25,17 @@ var ReturnResponse_ = ({
 var GetResponse_ = ({
     //
     no_form_data: function (req) {
+        //
         return 'No form data sent';
     },
    //
     error: function (req) {
+        //
         return 'Aw! snap, an error was encountered';
     },
     //
     user_signup: function (req) {
+        //
         switch (req){
             case 'title':
                 return 'Create new acccount';
@@ -47,6 +53,7 @@ var GetResponse_ = ({
     },
     //
     user_signin: function (req) {
+        //
         switch (req){
             case 'title':
                 return 'Please log in';
@@ -61,6 +68,7 @@ var GetResponse_ = ({
     },
     //
     new_record: function (req) {
+        //
         switch (req){
             case 'success':
                 return 'Record successfully sent';
@@ -69,13 +77,23 @@ var GetResponse_ = ({
     },
     //
     page_title:function (req) {
+        //
         switch (req){
             case 'index':
                 return 'Welcome to Safetee';
             break;
         }
-    }
+    },
     //
+    put_circle: function (req) {
+        //
+        switch (req){
+            case 'success':
+                return 'Circle(s) added successfully';
+            break;
+        }
+
+    }
 });
 
 module.exports = ({

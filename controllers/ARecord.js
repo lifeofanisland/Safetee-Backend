@@ -1,14 +1,13 @@
-var BaseController = require("./Base");
-var safetee = require("../models/Safetee");
-var safetee_response = require('../models/SafeteeResponse');
-var globalname = "Record";
+var safetee_buffer = require('../models/Safetee_Head_Buffer');
 
-module.exports = BaseController.extend({
+//
+module.exports = safetee_buffer.safetee_base_controller.extend({
     //
-    run: function(req, res, next) {
+    run: function(req) {
         //
-        safetee['records'].find({_id:req.params.id},function(err, record) {
-            safetee_response.returnresponse['send'](record);
+        safetee_buffer.safetee['records'].find({_id:req.params.id},function(err, record) {
+            //
+            safetee_buffer.safetee_response.returnresponse['send'](record);
         });
         //
     }

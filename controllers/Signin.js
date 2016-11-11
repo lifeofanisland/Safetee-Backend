@@ -4,7 +4,7 @@ var safetee_buffer = require('../models/Safetee_Head_Buffer');
 module.exports = safetee_buffer.safetee_base_controller.extend({
     run: function(req, res) {
         //
-        if(req.body && req.body.form && req.body.form == 'go') {
+        if(req.body && req.body.email && typeof req.body.email !== 'undefined' && req.body.password &&  typeof req.body.password !== 'undefined') {
         //
         var email = req.body.email;
         var password = req.body.password;
