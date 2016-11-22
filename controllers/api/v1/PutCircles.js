@@ -6,16 +6,16 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function (req, res) {
         //
-        if (req.body && req.body.sender && typeof req.body.sender !== 'undefined' && req.body.circle && typeof req.body.circle !== 'undefined') {
+        if (req.body && req.body.uid && typeof req.body.uid !== 'undefined' && req.body.circle && typeof req.body.circle !== 'undefined') {
             //
-            var sender = req.body.sender;
+            var sender = req.body.uid;
             var circle = req.body.circle;
             //
             var data = {
                circle: circle
             };
             //
-            safetee_buffer.safetee['users'].update({_id: sender}, data, function (err, newuser) {
+            safetee_buffer.safetee['users'].update({_id: sender}, data, function (err, circle) {
                 //
                 if (err) {
                     //
@@ -35,7 +35,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                     safetee_buffer.safetee_return_data = {
                         success: 1,
                         message: safetee_buffer.safetee_response.getresponse['put_circle']('success'),
-                        info: JSON.stringify(newuser)
+                        info: JSON.stringify(circle)
                     };
                     //
                     safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
