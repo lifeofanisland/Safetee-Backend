@@ -13,13 +13,13 @@ var datetimenow_ = currentdate.getDate() + "/"
 //
 var UserSchema = new Schema ({
     name: String,
-    phone_number: {type: Number, default: 0},
+    phone_number: String,
     email: String,
     sex: String,
     password: String,
     location: String,
     circle: String,
-    created: { type: Date, default: Date.now}
+    created: String,
 
 });
 //
@@ -43,11 +43,12 @@ var AgentsSchema = new Schema({
     about: String,
     address: String,
     password: String,
-    created: { type: Date, default: Date.now },
+    created: String,
     auth: String
 });
 //
 var RecordsSchema = new Schema({
+    uid: String,
     sender: String,
     location: String,
     record: String,
@@ -62,7 +63,20 @@ var TipsSchema = new Schema({
     title: String,
     body: String,
     category: String,
-    created: { type: Date, default: Date.now}
+    created: String
+});
+//
+var SubscribersSchema = new Schema({
+    name: String,
+    email: String,
+    created: String
+});
+//
+var DonationsSchema = new Schema({
+    donor: String,
+    recipient: String,
+    amount: String,
+    created: String
 })
 //
 var users_ = mongoose.model('users', UserSchema);
@@ -70,13 +84,17 @@ var agents_ = mongoose.model('agents', AgentsSchema);
 var articles_ = mongoose.model('articles', ArticlesSchema);
 var records_ = mongoose.model('records', RecordsSchema);
 var tips_ = mongoose.model('tips', TipsSchema);
+var subscribers_ = mongoose.model('subscribers', SubscribersSchema);
+var donations_ = mongoose.model('donations', DonationsSchema);
 //
 module.exports = {
     datetimenow:datetimenow_,
     users: users_,
-    agents:agents_,
-    articles:articles_,
-    records:records_,
-    tips:tips_
+    agents: agents_,
+    articles: articles_,
+    records: records_,
+    tips: tips_,
+    subscribers: subscribers_,
+    donations: donations_
 
 }

@@ -97,6 +97,27 @@ var GetResponse_ = ({
                 return 'Circle(s) added successfully';
             break;
         }
+    },
+    //
+    subscribe: function (req) {
+        //
+        switch (req){
+            case 'success':
+                return 'You are subscribed successfully';
+            break;
+            case  'exists':
+                return 'You are subscribed already';
+            break;
+        }
+    },
+    //
+    donate: function (req) {
+        //
+        switch (req){
+            case 'success':
+                return 'Donation was successful';
+                break;
+        }
     }
 });
 

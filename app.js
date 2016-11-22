@@ -12,25 +12,38 @@ var store = new MongoDBStore(
         collection: 'mySessions',
         clear_interval: 3600
     });
-//
+
+//Pages
 var Index = require('./controllers/Index');
-var Signup = require('./controllers/Signup');
-var Signin = require('./controllers/Signin');
-var NewRecord = require('./controllers/NewRecord');
-var AudioUpload = require('./controllers/AudioUpload');
-var Records = require('./controllers/Records');
-var ARecord = require('./controllers/ARecord');
-var Tips = require('./controllers/SafeteeTips');
-var ATip = require('./controllers/ASafeteeTip');
-var AgenciesAround = require('./controllers/AgenciesAround');
-var AnAgencyAround = require('./controllers/AnAgencyAround');
-var PutCircle = require('./controllers/PutCircles');
+
+//API v1
+var api_ver_folder = "api/v1/";
 //
-var AgencySignup = require('./controllers/AgencySignup');
-var AgencySignin = require('./controllers/Dashboard');
-var AgencySignout = require('./controllers/AgencySignout');
-var RecordStream = require('./controllers/RecordStream');
-var TakeLeaveCase = require('./controllers/TakeLeaveCase');
+var Signup = require('./controllers/'+api_ver_folder+'Signup');
+var Signin = require('./controllers/'+api_ver_folder+'Signin');
+var NewRecord = require('./controllers/'+api_ver_folder+'NewRecord');
+var AudioUpload = require('./controllers/'+api_ver_folder+'AudioUpload');
+var Records = require('./controllers/'+api_ver_folder+'Records');
+var ARecord = require('./controllers/'+api_ver_folder+'ARecord');
+var Tips = require('./controllers/'+api_ver_folder+'SafeteeTips');
+var ATip = require('./controllers/'+api_ver_folder+'ASafeteeTip');
+var AgenciesAround = require('./controllers/'+api_ver_folder+'AgenciesAround');
+var AnAgencyAround = require('./controllers/'+api_ver_folder+'AnAgencyAround');
+var PutCircle = require('./controllers/'+api_ver_folder+'PutCircles');
+var RecordStream = require('./controllers/'+api_ver_folder+'RecordStream');
+var Subscribe = require('./controllers/'+api_ver_folder+'Subscribe');
+var Donate = require('./controllers/'+api_ver_folder+'Donate');
+
+//Agency
+var agency_folder = "agency/";
+var AgencySignup = require('./controllers/'+agency_folder+'AgencySignup');
+var AgencySignin = require('./controllers/'+agency_folder+'Dashboard');
+var AgencySignout = require('./controllers/'+agency_folder+'AgencySignout');
+var TakeLeaveCase = require('./controllers/'+agency_folder+'TakeLeaveCase');
+
+//Admin
+var ContentDriver = require('./controllers/admin/ContentDriver');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/templates');
@@ -39,11 +52,7 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.cookieParser('safetee-backend'));
-app.use(express.session());
-app.use(app.router);
-app.use(require('less-middleware')({src: __dirname + '/public'}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.cookieParser('safetee-backend-run-on-rocks'));
 app.use(require('express-session')({
     secret: 'safetee_backend_rocks_on_Micassa_!!!!',
     cookie: {
@@ -53,6 +62,10 @@ app.use(require('express-session')({
     resave: false,
     saveUninitialized: true
 }));
+app.use(app.router);
+app.use(require('less-middleware')({src: __dirname + '/public'}));
+app.use(express.static(path.join(__dirname, 'public')));
+
 //
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
@@ -102,6 +115,12 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         app.all('/api/v1/agency/get/:id', function (req, res, next) {
             AnAgencyAround.run(req, res, next);
         });
+        app.all('/api/v1/subscribe', function (req, res, next) {
+            Subscribe.run(req, res, next);
+        });
+        app.all('/api/v1/donate', function (req, res, next) {
+            Donate.run(req, res, next);
+        });
         //Agency Run
         //
         app.all('/agency/signup', function (req, res, next) {
@@ -119,6 +138,16 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         app.all('/agency/takeleavecase', function (req, res, next) {
             TakeLeaveCase.run(req, res, next);
         });
+        //Admin
+        //
+        app.all('/web/admin',  function (req, res, next) {
+            res.redirect('/app/home')
+        });
+        //
+        app.all('/app/:id',  function (req, res, next) {
+            ContentDriver.run(req, res, next);
+        });
+        //
         http.createServer(app).listen(app.get('port'), function () {
             console.log(
                 'Successfully connected to mongodb://' + config.mongo.host + ':' + config.mongo.port,
