@@ -9,7 +9,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
             //
             if(records.length > 0) {
                 //
-                safetee_buffer.safetee_response.returnresponse['send'](records);
+                safetee_buffer.safetee_response.returnresponse['send'](records,res);
             }else{
                 //
                 safetee_buffer.safetee_return_data = {

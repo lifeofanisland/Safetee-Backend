@@ -9,7 +9,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
             //
             if(tips.length > 0) {
                 //
-                safetee_buffer.safetee_response.returnresponse['send'](tips);
+                safetee_buffer.safetee_response.returnresponse['send'](tips,res);
             }else{
                 //
                 safetee_buffer.safetee_return_data = {

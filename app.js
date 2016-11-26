@@ -110,7 +110,7 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
             ATip.run(req, res, next);
         });
         app.all('/api/v1/agencies/get/:id', function (req, res, next) {
-            AgenciesAround.run(req);
+            AgenciesAround.run(req, res);
         });
         app.all('/api/v1/agency/get/:id', function (req, res, next) {
             AnAgencyAround.run(req, res, next);
