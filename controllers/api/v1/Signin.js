@@ -25,7 +25,13 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 safetee_buffer.safetee_return_data = {
                     success:1,
                     message:safetee_buffer.safetee_response.getresponse['user_signin']('success'),
-                    info: JSON.stringify(checkuser)
+                    uid: checkuser[0]._id,
+                    info: push({
+                    fullname: checkuser[0].name,
+                    email: checkuser[0].email,
+                    phone_no: checkuser[0].phone_no,
+                    sex: checkuser[0].sex
+                })
                 };
                 //
                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
@@ -37,7 +43,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 safetee_buffer.safetee_return_data = {
                     status:0,
                     message:safetee_buffer.safetee_response.getresponse['user_signin']('notfound')
-                }
+                };
                 //
                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
             }

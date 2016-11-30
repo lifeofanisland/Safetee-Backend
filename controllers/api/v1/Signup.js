@@ -65,7 +65,13 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                             safetee_buffer.safetee_return_data = {
                                 success: 1,
                                 message: safetee_buffer.safetee_response.getresponse['user_signup']('success'),
-                                info: JSON.stringify(newuser)
+                                uid: newuser[0]._id,
+                                info: push({
+                                    fullname: newuser[0].name,
+                                    email: newuser[0].email,
+                                    phone_no: newuser[0].phone_no,
+                                    sex: newuser[0].sex
+                                })
                             };
                             //
                             safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
