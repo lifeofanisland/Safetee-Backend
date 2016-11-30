@@ -13,7 +13,7 @@ var datetimenow_ = currentdate.getDate() + "/"
 //
 var UserSchema = new Schema ({
     name: String,
-    phone_number: String,
+    phone_no: String,
     email: String,
     sex: String,
     password: String,

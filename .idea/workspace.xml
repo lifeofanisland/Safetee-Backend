@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/Signin.js" afterPath="$PROJECT_DIR$/controllers/api/v1/Signin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/Signup.js" afterPath="$PROJECT_DIR$/controllers/api/v1/Signup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Safetee.js" afterPath="$PROJECT_DIR$/models/Safetee.js" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,18 +40,18 @@
       <file leaf-file-name="Signup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+            <state relative-caret-position="997">
+              <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Signin.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Signin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="100">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -68,21 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Safetee.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Safetee.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Safetee.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1649">
-              <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.hjs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/dashboard.hjs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1581">
-              <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
+            <state relative-caret-position="91">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -170,7 +159,6 @@
         <option value="$PROJECT_DIR$/templates/admin/dashboard.hjs" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Subscribe.js" />
         <option value="$PROJECT_DIR$/models/Menu.js" />
-        <option value="$PROJECT_DIR$/models/Safetee.js" />
         <option value="$PROJECT_DIR$/models/Admin_Contents.js" />
         <option value="$PROJECT_DIR$/controllers/admin/ContentDriver.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Donate.js" />
@@ -185,8 +173,9 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/AgenciesAround.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/AnAgencyAround.js" />
-        <option value="$PROJECT_DIR$/controllers/api/v1/Signup.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Signin.js" />
+        <option value="$PROJECT_DIR$/controllers/api/v1/Signup.js" />
+        <option value="$PROJECT_DIR$/models/Safetee.js" />
       </list>
     </option>
   </component>
@@ -454,7 +443,7 @@
       <workItem from="1479753929450" duration="25774000" />
       <workItem from="1479966222011" duration="150000" />
       <workItem from="1480185252944" duration="1183000" />
-      <workItem from="1480523574578" duration="1032000" />
+      <workItem from="1480523574578" duration="4186000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -547,14 +536,28 @@
       <option name="project" value="LOCAL" />
       <updated>1480185947454</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="API v1 fixing of signup and signin to return extended json result">
+      <created>1480524632283</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1480524632283</updated>
+    </task>
+    <task id="LOCAL-00015" summary="API v1 fixing of signup and signin to return extended json result">
+      <created>1480528333430</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1480528333430</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262057000" />
+    <option name="totallyTimeSpent" value="265211000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13543192" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -753,14 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Safetee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,18 +973,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signup.js">
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        <state relative-caret-position="100">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signin.js">
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="997">
+          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Safetee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding />
         </state>
       </provider>
