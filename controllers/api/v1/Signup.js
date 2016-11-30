@@ -6,7 +6,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function (req, res) {
         //
-        if(req.body && req.body.email && typeof req.body.email !== 'undefined' && req.body.password &&  typeof req.body.password !== 'undefined' && req.body.name &&  typeof req.body.name !== 'undefined' && req.body.phone_no &&  typeof req.body.phone_no !== 'undefined') {
+        if (req.body && req.body.email && typeof req.body.email !== 'undefined' && req.body.password && typeof req.body.password !== 'undefined' && req.body.name && typeof req.body.name !== 'undefined' && req.body.phone_no && typeof req.body.phone_no !== 'undefined') {
             //
             var name = req.body.name;
             var phone_no = req.body.phone_no;
@@ -28,7 +28,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 "created": safetee_buffer.safetee.datetimenow
             };
             //
-            safetee_buffer.safetee['users'].find({email:data.email}, function (err, checkuser) {
+            safetee_buffer.safetee['users'].find({email: data.email}, function (err, checkuser) {
                 //
                 if (checkuser.length > 0) {
                     //
@@ -41,13 +41,13 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                         message: safetee_buffer.safetee_response.getresponse['user_signup']('exists')
                     };
                     //
-                    safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
+                    safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
                     //
                 } else {
                     //
                     safetee_buffer.safetee['users'].create(data, function (err, newuser) {
                         //
-                        if(err){
+                        if (err) {
                             //
                             console.log(safetee_buffer.safetee_response.getresponse['error'](req));
                             //
@@ -56,25 +56,23 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                 message: safetee_buffer.safetee_response.getresponse['error'](req)
                             };
                             //
-                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
+                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
                             //
-                        }else {
+                        } else {
                             //
                             console.log(safetee_buffer.safetee_response.getresponse['user_signup']('success') + JSON.stringify(newuser));
                             //
                             safetee_buffer.safetee_return_data = {
                                 success: 1,
                                 message: safetee_buffer.safetee_response.getresponse['user_signup']('success'),
-                                uid: newuser[0]._id,
-                                info: push({
-                                    fullname: newuser[0].name,
-                                    email: newuser[0].email,
-                                    phone_no: newuser[0].phone_no,
-                                    sex: newuser[0].sex
-                                })
+                                uid: newuser._id,
+                                fullname: newuser.name,
+                                email: newuser.email,
+                                phone_no: newuser.phone_no,
+                                sex: newuser.sex
                             };
                             //
-                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
+                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
                         }
                     });
                 }
@@ -88,7 +86,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 message: safetee_buffer.safetee_response.getresponse['no_form_data'](req)
             };
             //
-            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
+            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
         }
 
     }
