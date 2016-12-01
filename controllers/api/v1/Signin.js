@@ -39,7 +39,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 console.log(safetee_buffer.safetee_response.getresponse['user_signin']('notfound'));
                 //
                 safetee_buffer.safetee_return_data = {
-                    status:0,
+                    success:0,
                     message:safetee_buffer.safetee_response.getresponse['user_signin']('notfound')
                 };
                 //
