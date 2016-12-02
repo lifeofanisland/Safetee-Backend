@@ -37,7 +37,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                     //
                 } else {
                     //
-                    safetee_buffer.safetee['users'].update({_id: uid},data, function (err, newuser) {
+                    safetee_buffer.safetee['users'].update({_id: uid},data, function (err, user) {
                         //
                         if (err) {
                             //
@@ -52,16 +52,16 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                             //
                         } else {
                             //
-                            console.log(safetee_buffer.safetee_response.getresponse['user_setting']('success') + JSON.stringify(newuser));
+                            console.log(safetee_buffer.safetee_response.getresponse['user_setting']('success') + JSON.stringify(user));
                             //
                             safetee_buffer.safetee_return_data = {
                                 success: 1,
                                 message: safetee_buffer.safetee_response.getresponse['user_setting']('success'),
-                                uid: newuser._id,
-                                fullname: newuser.name,
-                                email: newuser.email,
-                                phone_no: newuser.phone_no,
-                                sex: newuser.sex
+                                uid: user[0]._id,
+                                fullname: user[0].name,
+                                email: user[0].email,
+                                phone_no: user[0].phone_no,
+                                sex: user[0].sex
                             };
                             //
                             safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
