@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/Settings.js" afterPath="$PROJECT_DIR$/controllers/api/v1/Settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/Records.js" afterPath="$PROJECT_DIR$/controllers/api/v1/Records.js" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="1887">
               <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
               <folding />
             </state>
@@ -40,7 +40,7 @@
       <file leaf-file-name="Safetee.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Safetee.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
+            <state relative-caret-position="544">
               <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
               <folding />
             </state>
@@ -57,17 +57,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Records.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Records.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/Records.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Settings.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Settings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/Settings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
@@ -90,7 +90,7 @@
       <file leaf-file-name="PutCircles.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/PutCircles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="289">
               <caret line="17" column="60" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="65" />
               <folding />
             </state>
@@ -192,10 +192,10 @@
         <option value="$PROJECT_DIR$/controllers/api/v1/Signup.js" />
         <option value="$PROJECT_DIR$/models/Safetee.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Signin.js" />
-        <option value="$PROJECT_DIR$/controllers/api/v1/Records.js" />
         <option value="$PROJECT_DIR$/models/SafeteeResponse.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Settings.js" />
+        <option value="$PROJECT_DIR$/controllers/api/v1/Records.js" />
       </list>
     </option>
   </component>
@@ -212,7 +212,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -241,7 +241,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,6 +339,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,7 +466,8 @@
       <workItem from="1480523574578" duration="6358000" />
       <workItem from="1480615324694" duration="597000" />
       <workItem from="1480649779781" duration="1330000" />
-      <workItem from="1480661094276" duration="1030000" />
+      <workItem from="1480661094276" duration="1576000" />
+      <workItem from="1480672102309" duration="152000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -622,17 +623,24 @@
       <option name="project" value="LOCAL" />
       <updated>1480661934043</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add v1 api for user settings">
+      <created>1480662180209</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1480662180209</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270340000" />
+    <option name="totallyTimeSpent" value="271038000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13250366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13220088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16561514" sideWeight="0.5080527" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -898,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="1887">
           <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
           <folding />
         </state>
@@ -908,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,14 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Records.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -962,7 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Safetee.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
+        <state relative-caret-position="544">
           <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
           <folding />
         </state>
@@ -970,7 +969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/v1/PutCircles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="289">
           <caret line="17" column="60" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="65" />
           <folding />
         </state>
@@ -980,6 +979,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Records.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
         </state>
       </provider>
