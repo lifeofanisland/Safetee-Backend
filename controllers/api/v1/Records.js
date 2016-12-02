@@ -17,7 +17,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                     message: safetee_buffer.safetee_response.getresponse['no_content'](req)
                 };
                 //
-                safetee_buffer.safetee_response.returnresponse['send'](JSON.stringify(safetee_buffer.safetee_return_data),res);
+                safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
             }
         });
         //
