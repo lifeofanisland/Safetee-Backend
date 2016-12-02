@@ -72,6 +72,21 @@ var GetResponse_ = ({
         }
     },
     //
+    user_setting: function (req) {
+        //
+        switch (req){
+            case 'title':
+                return 'Settings';
+                break;
+            case 'notfound':
+                return 'incorrect password';
+                break;
+            case 'success':
+                return 'changes were made successfully';
+                break;
+        }
+    },
+    //
     new_record: function (req) {
         //
         switch (req){

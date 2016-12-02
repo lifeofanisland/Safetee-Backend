@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/api/v1/Settings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/Records.js" afterPath="$PROJECT_DIR$/controllers/api/v1/Records.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/SafeteeResponse.js" afterPath="$PROJECT_DIR$/models/SafeteeResponse.js" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,41 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+            <state relative-caret-position="288">
+              <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Signup.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Signup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signup.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Signin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContentDriver.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/admin/ContentDriver.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3740">
-              <caret line="220" column="37" selection-start-line="220" selection-start-column="37" selection-end-line="220" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -90,8 +72,38 @@
       <file leaf-file-name="Records.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/Records.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            <state relative-caret-position="408">
+              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/api/v1/Settings.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PutCircles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/api/v1/PutCircles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="60" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SafeteeResponse.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/SafeteeResponse.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -135,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/Index.js" />
         <option value="$PROJECT_DIR$/controllers/AudioUpload.js" />
         <option value="$PROJECT_DIR$/models/Safetee_Upload_Dir.js" />
         <option value="$PROJECT_DIR$/bin/www" />
@@ -172,20 +183,21 @@
         <option value="$PROJECT_DIR$/models/Admin_Contents.js" />
         <option value="$PROJECT_DIR$/controllers/admin/ContentDriver.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Donate.js" />
-        <option value="$PROJECT_DIR$/models/SafeteeResponse.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/PutCircles.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/NewRecord.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/SafeteeTips.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/ASafeteeTip.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/ARecord.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/AgenciesAround.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/AnAgencyAround.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Signup.js" />
         <option value="$PROJECT_DIR$/models/Safetee.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Signin.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Records.js" />
+        <option value="$PROJECT_DIR$/models/SafeteeResponse.js" />
+        <option value="$PROJECT_DIR$/controllers/api/v1/Settings.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -212,7 +224,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -455,7 +467,7 @@
       <workItem from="1480185252944" duration="1183000" />
       <workItem from="1480523574578" duration="6358000" />
       <workItem from="1480615324694" duration="597000" />
-      <workItem from="1480649779781" duration="92000" />
+      <workItem from="1480649779781" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -576,11 +588,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480600293038</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed get user records">
+      <created>1480649910988</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1480649910988</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268072000" />
+    <option name="totallyTimeSpent" value="268681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -627,20 +646,14 @@
     <MESSAGE value="initial Commit" />
     <MESSAGE value="API v1 fixing of res ommit" />
     <MESSAGE value="API v1 fixing of signup and signin to return extended json result" />
-    <option name="LAST_COMMIT_MESSAGE" value="API v1 fixing of signup and signin to return extended json result" />
+    <MESSAGE value="fixed get user records" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed get user records" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/Safetee_Vars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ARecord.js" />
     <entry file="file://$PROJECT_DIR$/controllers/AnAgencyAround.js" />
     <entry file="file://$PROJECT_DIR$/controllers/TakeLeaveCase.js" />
@@ -799,13 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/SafeteeResponse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="107" column="27" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Safetee_Upload_Dir.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -855,21 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/PutCircles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/v1/Signin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -910,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Records.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Safetee.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -930,6 +913,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Records.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/SafeteeResponse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/PutCircles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="60" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
           <folding />
         </state>
       </provider>

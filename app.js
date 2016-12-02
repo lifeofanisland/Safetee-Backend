@@ -33,6 +33,7 @@ var PutCircle = require('./controllers/'+api_ver_folder+'PutCircles');
 var RecordStream = require('./controllers/'+api_ver_folder+'RecordStream');
 var Subscribe = require('./controllers/'+api_ver_folder+'Subscribe');
 var Donate = require('./controllers/'+api_ver_folder+'Donate');
+var Settings = require('./controllers/'+api_ver_folder+'Settings');
 
 //Agency
 var agency_folder = "agency/";
@@ -120,6 +121,9 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         });
         app.all('/api/v1/donate', function (req, res, next) {
             Donate.run(req, res, next);
+        });
+        app.all('/api/v1/user/setting', function (req, res, next) {
+            Settings.run(req, res, next);
         });
         //Agency Run
         //
