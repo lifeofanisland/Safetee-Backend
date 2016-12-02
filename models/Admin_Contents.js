@@ -62,7 +62,8 @@ exports.records = function (req, callback) {
             markup += ' <table data-ride="datatables" style="max-width:100% !important;border-left:2px solid greenyellow;" class="activity-log__content table table-striped m-b-none">\
                 <thead>\
                 <tr>\
-                <th width="60%">Location</th>\
+                <th width="30%">Sender</th>\
+                <th width="30%">Location</th>\
                 <th width="25%">Time</th>\
                 <th width="15%">Action</th>\
                 </tr>\
@@ -75,6 +76,7 @@ exports.records = function (req, callback) {
                //
                 markup += '\
                     <tr>\
+                        <td>' + record.sender + '</td>\
                         <td>' + record.location + '</td>\
                         <td>' + record.created + '</td>\
                         <td><a href="#" id="rep1'+i+'" class="fa fa-play pointercursor" onclick="getrecord(\'Record stream\',\''+record._id+'\');"></a>\
