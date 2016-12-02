@@ -5,7 +5,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function(req, res) {
         //
-        safetee_buffer.safetee['records'].find({sender:req.params.id},function(err, records) {
+        safetee_buffer.safetee['records'].find({uid:req.params.id},function(err, records) {
             //
             if(records.length > 0) {
                 //
