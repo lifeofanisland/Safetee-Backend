@@ -63,7 +63,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                     fullname: guser.name,
                                     email: guser[0].email,
                                     phone_no: guser[0].phone_no,
-                                    sex: user[0].sex
+                                    sex: guser[0].sex
                                 };
                                 //
                                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
