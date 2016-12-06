@@ -164,6 +164,18 @@ module.exports = e.safetee_base_controller.extend({
                 callback(data);
             });
             //
+        } else if (page == "reports") {
+            //
+            c.reports(req, function (response) {
+                //
+                data = {
+                    body: response,
+                    title: 'Reports'
+                }
+                //
+                callback(data);
+            });
+            //
         } else if (page == "users") {
             //
             c.users(req, function (response) {

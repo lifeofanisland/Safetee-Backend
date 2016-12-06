@@ -107,6 +107,88 @@ exports.records = function (req, callback) {
     //
 }
 //
+exports.reports = function (req, callback) {
+    //
+    var data, sort, limit;
+    //
+    if (typeof req.query.s !== 'undefined') {
+        //
+        var squery = req.query.s;
+        //
+        var regsearch = new RegExp(squery, "i");
+        data = {
+            $and: [{
+                $or: [
+                    {"location": regsearch}, {"created": regsearch},
+                    {"about": regsearch}
+                ]
+            }
+            ]
+        }
+        sort = {_id: -1}
+        limit = 200;
+    } else {
+        //
+        data = {}
+        sort = {_id: -1}
+        limit = 200;
+    }
+    s['reports'].find(data).sort(sort).limit(limit).exec(function (err, records) {
+        //
+        console.log(records);
+        //
+        if (records.length > 0) {
+            //
+            var markup = '';
+            //
+            markup += ' <table data-ride="datatables" style="max-width:100% !important;border-left:2px solid greenyellow;" class="activity-log__content table table-striped m-b-none">\
+                <thead>\
+                <tr>\
+                <th width="30%">Sender</th>\
+                <th width="30%">Location</th>\
+                <th width="25%">Time</th>\
+                <th width="15%">Action</th>\
+                </tr>\
+                </thead>\
+                <tbody>';
+            //
+            var record;
+            //
+            for (var i = 0; record = records[i]; i++) {
+                //
+                markup += '\
+                    <tr>\
+                        <td>' + record.sender + '</td>\
+                        <td>' + record.location + '</td>\
+                        <td>' + record.created + '</td>\
+                        <td><a href="' + record.clip + '" target="_blank" id="rep1' + i + '" class="fa fa-play pointercursor"></a>\
+                        &nbsp;&nbsp;<a href="#"><i class="fa fa-info-circle"></i> </a>\
+                        &nbsp;&nbsp;<a href="#"><i class="fa fa-trash"></i> </a> \
+                        <span id="case1' + record._id + '"></span>\
+                        </td>\
+                        <tr>\
+			';
+            }
+            markup += '</tbody>\
+                       </table>';
+            //
+        } else {
+            //
+            markup = '\
+                    <tr>\
+                        <td>No report available</td>\
+                        <td></td>\
+                        <td>\
+                        </td>\
+                        <tr>\
+			';
+
+        }
+        callback(markup);
+    });
+    //
+}
+//
 exports.users = function (req, callback) {
     //
     var data, sort, limit;
