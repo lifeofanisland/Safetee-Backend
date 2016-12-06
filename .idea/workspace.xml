@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/NewReport.js" afterPath="$PROJECT_DIR$/controllers/api/v1/NewReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Menu.js" afterPath="$PROJECT_DIR$/models/Menu.js" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="Safetee.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Safetee.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="1411">
               <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
               <folding />
             </state>
@@ -87,11 +87,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewReport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewReport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewReport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="170">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/Menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,7 +110,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="1972">
               <caret line="116" column="47" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
               <folding />
             </state>
@@ -155,7 +165,6 @@
         <option value="$PROJECT_DIR$/models/Contents.js" />
         <option value="$PROJECT_DIR$/templates/admin/dashboard.hjs" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Subscribe.js" />
-        <option value="$PROJECT_DIR$/models/Menu.js" />
         <option value="$PROJECT_DIR$/controllers/admin/ContentDriver.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/Donate.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
@@ -176,6 +185,7 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/models/Safetee.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/NewReport.js" />
+        <option value="$PROJECT_DIR$/models/Menu.js" />
       </list>
     </option>
   </component>
@@ -221,6 +231,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,6 +247,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SafeteeJsFlex" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Safetee JsFlex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SafeteeJsFlex" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -287,7 +312,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,7 +442,10 @@
       <workItem from="1480672102309" duration="2344000" />
       <workItem from="1480761150801" duration="92000" />
       <workItem from="1480998704600" duration="1236000" />
-      <workItem from="1480999996306" duration="1359000" />
+      <workItem from="1480999996306" duration="1540000" />
+      <workItem from="1481005887111" duration="1406000" />
+      <workItem from="1481024124323" duration="17000" />
+      <workItem from="1481026783843" duration="453000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -637,11 +664,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481000737433</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="v1 api fixing for report">
+      <created>1481001729221</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1481001729221</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275917000" />
+    <option name="totallyTimeSpent" value="277974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -652,22 +686,22 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16561514" sideWeight="0.5080527" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19400631" sideWeight="0.4919473" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4022082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19400631" sideWeight="0.4919473" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -692,7 +726,8 @@
     <MESSAGE value="add v1 api for user settings" />
     <MESSAGE value="v1 api fixing for records" />
     <MESSAGE value="v1 api fixing for report" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1 api fixing for report" />
+    <MESSAGE value="admin fixing for reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin fixing for reports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -834,13 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/v1/Subscribe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-80">
@@ -909,64 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-          <folding>
-            <marker date="1480672408528" expanded="true" signature="186:216" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="796:826" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="2233:2293" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="2353:2654" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="2378:2629" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="2400:2603" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="2846:3462" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="3047:3436" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="3197:3203" ph=" " />
-            <marker date="1480672408528" expanded="false" signature="3203:3209" ph=" " />
-            <marker date="1480672408528" expanded="false" signature="3285:3291" ph=" " />
-            <marker date="1480672408528" expanded="false" signature="3291:3297" ph=" " />
-            <marker date="1480672408528" expanded="true" signature="3466:3471" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="3649:3825" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="3768:3799" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="3829:3834" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="4870:4930" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="4990:5377" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="5015:5352" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="5037:5326" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="5562:6034" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="5870:6008" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="5947:5953" ph=" " />
-            <marker date="1480672408528" expanded="false" signature="5953:5959" ph=" " />
-            <marker date="1480672408528" expanded="true" signature="6038:6043" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="6221:6397" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="6340:6371" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="6401:6406" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="7462:7522" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="7582:7975" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="7607:7950" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="7629:7924" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="8160:8652" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="8488:8626" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="8565:8571" ph=" " />
-            <marker date="1480672408528" expanded="false" signature="8571:8577" ph=" " />
-            <marker date="1480672408528" expanded="true" signature="8656:8661" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="9799:9859" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="9919:10178" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="9944:10153" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="9966:10127" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="10363:10643" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="10647:10652" ph="..." />
-            <marker date="1480672408528" expanded="false" signature="11804:11864" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="11924:12176" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="11949:12151" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="11971:12125" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="12361:12698" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="12500:12672" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="12702:12707" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="13860:13920" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="13980:14282" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="14005:14257" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="14027:14231" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="14467:14753" ph="..." />
-            <marker date="1480672408528" expanded="true" signature="14757:14762" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="60" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,14 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewRecord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Safetee_Vars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1037,6 +998,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/Safetee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Safetee_Upload_Dir.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1045,26 +1022,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="1972">
           <caret line="116" column="47" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Safetee.js">
+    <entry file="file://$PROJECT_DIR$/models/Menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewReport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="221">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>
