@@ -86,6 +86,7 @@ var DonationsSchema = new Schema({
 var ReportsSchema = new Schema({
     uid: String,
     sender: String,
+    about: String,
     location: String,
     clip: String,
     created: String

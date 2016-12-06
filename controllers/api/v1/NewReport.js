@@ -13,12 +13,14 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 var sender = req.body.sender;
                 var location = req.body.location;
                 var clip = clip_url;
+                var about = req.body.about;
                 //
                 var data = {
                     "uid": uid,
                     "sender": sender,
+                    "about": about,
                     "location": location,
-                    "clip": record,
+                    "clip": clip,
                     "created": safetee_buffer.safetee.datetimenow
                 };
                 //
