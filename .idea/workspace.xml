@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="v1 api fixing for report">
+    <list default="true" id="ed794cba-e850-4a84-b976-a94b6f99fca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/NewReport.js" afterPath="$PROJECT_DIR$/controllers/api/v1/NewReport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Safetee.js" afterPath="$PROJECT_DIR$/models/Safetee.js" />
     </list>
     <ignored path="Trulo JsFlex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,8 +90,8 @@
       <file leaf-file-name="NewReport.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewReport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="91">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -419,7 +418,7 @@
       <workItem from="1480672102309" duration="2344000" />
       <workItem from="1480761150801" duration="92000" />
       <workItem from="1480998704600" duration="1236000" />
-      <workItem from="1480999996306" duration="720000" />
+      <workItem from="1480999996306" duration="1359000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1475284662921</created>
@@ -631,11 +630,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481000118519</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="v1 api fixing for report">
+      <created>1481000737433</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1481000737433</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275278000" />
+    <option name="totallyTimeSpent" value="275917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -685,7 +691,8 @@
     <MESSAGE value="fixed get user records" />
     <MESSAGE value="add v1 api for user settings" />
     <MESSAGE value="v1 api fixing for records" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1 api fixing for records" />
+    <MESSAGE value="v1 api fixing for report" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1 api fixing for report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1056,8 +1063,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/v1/NewReport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="91">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
