@@ -96,6 +96,15 @@ var GetResponse_ = ({
         }
     },
     //
+    new_report: function (req) {
+        //
+        switch (req){
+            case 'success':
+                return 'Report successfully sent';
+                break;
+        }
+    },
+    //
     page_title:function (req) {
         //
         switch (req){

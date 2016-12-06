@@ -7,32 +7,22 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
         //
         if(typeof req.files.record !== 'undefined' && typeof req.body.sender !== 'undefined' && typeof req.body.location !== 'undefined' && typeof req.body.uid !=='undefined') {
             //
-            this.AudioUpload(req, function (audio_url) {
+            this.ClipUpload(req, function (clip_url) {
                 //
                 var uid = req.body.uid;
                 var sender = req.body.sender;
                 var location = req.body.location;
-                var record = audio_url;
-                var category = req.body.category;
-                var uniqueid = req.body.uniqueid;
-                var length = req.body.length;
-                var recordname = req.body.recordname;
+                var clip = clip_url;
                 //
                 var data = {
                     "uid": uid,
                     "sender": sender,
                     "location": location,
-                    "record": record,
-                    "created": safetee_buffer.safetee.datetimenow,
-                    "category": category,
-                    "uniqueid": uniqueid,
-                    "length": length,
-                    "recordname": recordname,
-                    "agencies": [],
-                    "share": false
+                    "clip": record,
+                    "created": safetee_buffer.safetee.datetimenow
                 };
                 //
-                safetee_buffer.safetee['records'].create(data, function (err, response) {
+                safetee_buffer.safetee['reports'].create(data, function (err, response) {
                     //
                     if (err) {
                         //
@@ -47,11 +37,11 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                         //
                     } else {
                         //
-                        console.log(safetee_buffer.safetee_response.getresponse['new_record']('success'));
+                        console.log(safetee_buffer.safetee_response.getresponse['new_report']('success'));
                         //
                         safetee_buffer.safetee_return_data = {
                             success: 1,
-                            message: safetee_buffer.safetee_response.getresponse['new_record']('success'),
+                            message: safetee_buffer.safetee_response.getresponse['new_report']('success'),
                             info: JSON.stringify(response)
                         };
                         //
@@ -74,18 +64,18 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
 
     },
 
-    //handle audio upload here
-    AudioUpload: function(req, callback) {
+    //handle clip upload here
+    ClipUpload: function(req, callback) {
         //
-        if (!req.files || !req.files.record || !req.files.record.name) {
+        if (!req.files || !req.files.clip || !req.files.clip.name) {
             callback ('');
         }
-        var data = safetee_buffer.safetee_filesync.readFileSync(req.files.record.path);
-        var audioid = safetee_buffer.safetee_crypto.randomBytes(10).toString('hex');
-        var fileName = audioid + "_" + Date.now() + "_" + req.files.record.name;
-        var dir = safetee_buffer.safetee_dir.audio_upload_dir['audio_dir_heroku'](req);
+        var data = safetee_buffer.safetee_filesync.readFileSync(req.files.clip.path);
+        var clipid = safetee_buffer.safetee_crypto.randomBytes(10).toString('hex');
+        var fileName = clipid + "_" + Date.now() + "_" + req.files.clip.name;
+        var dir = safetee_buffer.safetee_dir.clip_upload_dir['clip_dir_heroku'](req);
         console.log(dir);
         safetee_buffer.safetee_filesync.writeFileSync(dir + "/" + fileName, data);
-        callback(safetee_buffer.safetee_var.url['host_url'](req) + '/records/' + fileName);
+        callback(safetee_buffer.safetee_var.url['host_url'](req) + '/clips/' + fileName);
     }
 });

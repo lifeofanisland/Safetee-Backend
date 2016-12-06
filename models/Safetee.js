@@ -54,6 +54,9 @@ var RecordsSchema = new Schema({
     record: String,
     created: String,
     category: String,
+    uniqueid: String,
+    length: String,
+    recordname: String,
     agencies: String,
     share: String
 });
@@ -79,6 +82,14 @@ var DonationsSchema = new Schema({
     created: String
 })
 //
+//
+var ReportsSchema = new Schema({
+    uid: String,
+    sender: String,
+    location: String,
+    clip: String,
+    created: String
+});
 var users_ = mongoose.model('users', UserSchema);
 var agents_ = mongoose.model('agents', AgentsSchema);
 var articles_ = mongoose.model('articles', ArticlesSchema);
@@ -86,6 +97,7 @@ var records_ = mongoose.model('records', RecordsSchema);
 var tips_ = mongoose.model('tips', TipsSchema);
 var subscribers_ = mongoose.model('subscribers', SubscribersSchema);
 var donations_ = mongoose.model('donations', DonationsSchema);
+var reports_ = mongoose.model('reports', ReportsSchema);
 //
 module.exports = {
     datetimenow:datetimenow_,
@@ -95,6 +107,6 @@ module.exports = {
     records: records_,
     tips: tips_,
     subscribers: subscribers_,
-    donations: donations_
-
+    donations: donations_,
+    reports: reports_
 }

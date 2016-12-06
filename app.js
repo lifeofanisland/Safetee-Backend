@@ -34,7 +34,7 @@ var RecordStream = require('./controllers/'+api_ver_folder+'RecordStream');
 var Subscribe = require('./controllers/'+api_ver_folder+'Subscribe');
 var Donate = require('./controllers/'+api_ver_folder+'Donate');
 var Settings = require('./controllers/'+api_ver_folder+'Settings');
-
+var NewReport = require('./controllers/'+api_ver_folder+'NewReport');
 //Agency
 var agency_folder = "agency/";
 var AgencySignup = require('./controllers/'+agency_folder+'AgencySignup');
@@ -124,6 +124,9 @@ mongoose.connect('mongodb://' + config.mongo.host + ':' + config.mongo.port + '/
         });
         app.all('/api/v1/user/setting', function (req, res, next) {
             Settings.run(req, res, next);
+        });
+        app.all('/api/v1/report/add', function (req, res, next) {
+            NewReport.run(req, res, next);
         });
         //Agency Run
         //
