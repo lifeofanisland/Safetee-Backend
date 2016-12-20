@@ -60,7 +60,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                     message: safetee_buffer.safetee_response.getresponse['user_setting']('success'),
                                     uid: guser[0]._id,
                                     fullname: guser[0].name,
-                                    phone_no: guser[0].phone_no,
+                                    phone_no: guser[0].phone_no
                                 };
                                 //
                                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
