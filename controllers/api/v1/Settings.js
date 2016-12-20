@@ -6,21 +6,20 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
     //
     run: function (req, res) {
         //
-        if (req.body && req.body.uid && typeof req.body.uid !== 'undefined' && req.body.password && typeof req.body.password !== 'undefined') {
+        if (req.body && req.body.uid && typeof req.body.uid !== 'undefined') {
             //
             var uid = req.body.uid;
             var phone_no = req.body.phone_no;
-            var email = req.body.email;
-            var password = req.body.password;
+            var fullname = req.body.fullname;
             //
-            password = safetee_buffer.safetee_crypto.createHash('md5').update(password).digest("hex");
+            //password = safetee_buffer.safetee_crypto.createHash('md5').update(password).digest("hex");
             //
             var data = {
                 "phone_no": phone_no,
-                "email": email
+                "name": fullname
             };
             //
-            safetee_buffer.safetee['users'].find({_id: uid, password: password}, function (err, checkuser) {
+            safetee_buffer.safetee['users'].find({_id: uid}, function (err, checkuser) {
                 //
                 if (checkuser.length < 1) {
                     //
@@ -61,9 +60,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                     message: safetee_buffer.safetee_response.getresponse['user_setting']('success'),
                                     uid: guser[0]._id,
                                     fullname: guser[0].name,
-                                    email: guser[0].email,
                                     phone_no: guser[0].phone_no,
-                                    sex: guser[0].sex
                                 };
                                 //
                                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
