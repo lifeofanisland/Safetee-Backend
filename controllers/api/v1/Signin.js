@@ -32,14 +32,34 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                 //
             }else{
                 //
-                console.log(safetee_buffer.safetee_response.getresponse['user_signin']('notfound'));
-                //
-                safetee_buffer.safetee_return_data = {
-                    success:0,
-                    message:safetee_buffer.safetee_response.getresponse['user_signin']('notfound')
-                };
-                //
-                safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
+                    safetee_buffer.safetee['users'].create(data, function (err, newuser) {
+                        //
+                        if (err) {
+                            //
+                            console.log(safetee_buffer.safetee_response.getresponse['error'](req));
+                            //
+                            safetee_buffer.safetee_return_data = {
+                                success: 0,
+                                message: safetee_buffer.safetee_response.getresponse['error'](req)
+                            };
+                            //
+                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
+                            //
+                        } else {
+                            //
+                            console.log(safetee_buffer.safetee_response.getresponse['user_signup']('success') + JSON.stringify(newuser));
+                            //
+                            safetee_buffer.safetee_return_data = {
+                                success: 1,
+                                message: safetee_buffer.safetee_response.getresponse['user_signup']('success'),
+                                uid: newuser._id,
+                                fullname: newuser.name,    
+                                phone_no: newuser.phone_no
+                            };
+                            //
+                            safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
+                        }
+                    });
             }
         });
             //
