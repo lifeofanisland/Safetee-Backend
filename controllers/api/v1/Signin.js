@@ -4,9 +4,10 @@ var safetee_buffer = require('../../../models/Safetee_Head_Buffer');
 module.exports = safetee_buffer.safetee_base_controller.extend({
     run: function(req, res) {
         //
-        if(req.body && req.body.phone_no && typeof req.body.phone_no !== 'undefined') {
+        if(req.body && req.body.phone_no && typeof req.body.phone_no !== 'undefined' && req.body.ccode && typeof req.body.ccode !== 'undefined') {
         //
         var phone_no = req.body.phone_no;
+        var ccode = req.body.ccode || Math.floor(Math.random()*10)+1;
         //
         //password = safetee_buffer.safetee_crypto.createHash('md5').update(password).digest("hex");
         //
@@ -24,8 +25,10 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                     success:1,
                     message:safetee_buffer.safetee_response.getresponse['user_signin']('success'),
                     uid: checkuser[0]._id,
-                    fullname: checkuser[0].name,
+                    fullname: checkuser[0].name || "",
                     phone_no: checkuser[0].phone_no,
+                    ccode: ccode
+
                 };
                 //
                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
@@ -53,8 +56,9 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                 success: 1,
                                 message: safetee_buffer.safetee_response.getresponse['user_signup']('success'),
                                 uid: newuser._id,
-                                fullname: newuser.name,    
-                                phone_no: newuser.phone_no
+                                fullname: newuser.name || "",    
+                                phone_no: newuser.phone_no,
+                                ccode: ccode
                             };
                             //
                             safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
