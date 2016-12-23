@@ -81,7 +81,7 @@ var service_name = ({
 
     verify: function () {
         //
-        return 'Safetee Beta';
+        return 'Safetee';
     }
 
 })
@@ -95,7 +95,7 @@ var sms_from = ({
 
      verify: function () {
         //
-        return 'Safetee Beta';
+        return 'Safetee VF';
     }
 })
 //
