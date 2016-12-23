@@ -32,7 +32,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
 
                 };
                 // send verification at once
-                safetee_buffer.sms_shoot.transport(safetee_buffer.sms_sender.verify(),phone_no,safetee_buffer.sms_message.verifyphone(ccode));
+                 safetee_buffer.safetee_sms.sms_shoot.transport(safetee_buffer.safetee_sms.sms_sender.verify(),phone_no,safetee_buffer.safetee_sms.sms_message.verifyphone(ccode));
                 //
                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
                 //
@@ -64,7 +64,7 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                 ccode: ccode
                             };
                             // send verification at once
-                           safetee_buffer.sms_shoot.transport(safetee_buffer.sms_sender.verify(),phone_no,safetee_buffer.sms_message.verifyphone(ccode));
+                           safetee_buffer.safetee_sms.sms_shoot.transport(safetee_buffer.safetee_sms.sms_sender.verify(),phone_no,safetee_buffer.safetee_sms.sms_message.verifyphone(ccode));
                             //
                             safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
                         }
