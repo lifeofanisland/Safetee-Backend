@@ -1,5 +1,6 @@
 var safetee_buffer = require('../../../models/Safetee_Head_Buffer');
 
+
 //
 module.exports = safetee_buffer.safetee_base_controller.extend({
     run: function(req, res) {
@@ -30,6 +31,8 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                     ccode: ccode
 
                 };
+                // send verification at once
+                safetee_buffer.sms_shoot.transport(safetee_buffer.sms_sender.verify(),phone_no,safetee_buffer.sms_message.verifyphone(ccode));
                 //
                 safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data,res);
                 //
@@ -60,6 +63,8 @@ module.exports = safetee_buffer.safetee_base_controller.extend({
                                 phone_no: newuser.phone_no,
                                 ccode: ccode
                             };
+                            // send verification at once
+                           safetee_buffer.sms_shoot.transport(safetee_buffer.sms_sender.verify(),phone_no,safetee_buffer.sms_message.verifyphone(ccode));
                             //
                             safetee_buffer.safetee_response.returnresponse['send'](safetee_buffer.safetee_return_data, res);
                         }
